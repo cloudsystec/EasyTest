@@ -40,6 +40,13 @@
 
 Tela de Criação:
 ![Alt tag](/Screenshots/Insert.png)
+![Alt tag](/Screenshots/Insert2.png)
+![Alt tag](/Screenshots/Insert3.png)
+![Alt tag](/Screenshots/Insert3_1.png)
+![Alt tag](/Screenshots/Insert3_2.png)
+![Alt tag](/Screenshots/Insert3_3.png)
+![Alt tag](/Screenshots/Insert3_4.png)
+![Alt tag](/Screenshots/Insert4.png)
 
 Tela de Listagem -  com aproveitamento de dados, para alterações e deleções
 ![Alt tag](/Screenshots/List.png)
