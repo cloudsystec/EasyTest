@@ -39,17 +39,17 @@
 ####Imagens do projeto
 
 Tela de Criação:
-![Alt text](/Screenshots/Insert.PNG "Tela de Insert")
+![Alt tag](/Screenshots/Insert.png)
 
 Tela de Listagem -  com aproveitamento de dados, para alterações e deleções
-![Alt text](/Screenshots/List.PNG "Tela de Listagem")
+![Alt tag](/Screenshots/List.png)
 
 As telas abaixo usam os mesmos dados da tela de listagem, não fazem postback para obter dados, apenas para update e delete (assíncrono)
-![Alt text](/Screenshots/Edit Person.PNG "Tela de Edição de dados pessoais")
-![Alt text](/Screenshots/Edit Bank.PNG "Tela de Edição de dados bancários")
-![Alt text](/Screenshots/Edit Aditional.PNG "Tela de Edição de dados adicionais (Conhecimentos)")
-![Alt text](/Screenshots/Delete.PNG "Tela de Deleção de formulário (confirmação)")
-![Alt text](/Screenshots/deleted.PNG "Tela de Deleção de formulário (confirmado)")
+![Alt tag](/Screenshots/Edit Person.png)
+![Alt tag](/Screenshots/Edit Bank.png)
+![Alt tag](/Screenshots/Edit Aditional.png)
+![Alt tag](/Screenshots/Delete.png)
+![Alt tag](/Screenshots/deleted.png)
 
 
 
