@@ -1,0 +1,70 @@
+﻿<div class="docs-ng-view layout-padding ng-scope flex-noshrink">
+    <div class="doc-content">
+
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+            <!--/person.bankInfo/-->
+            <form class="secondForm" name="secondForm" ng-submit="editPerson()">
+                <h3>Dados bancários</h3>
+                <hr />
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Nome</label>
+                            <input name="name" type="text" ng-model="person.bankInfo.name" class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>CPF</label>
+                            <input name="cpf" type="text" ng-model="person.bankInfo.cpf" class="form-control">
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-5">
+                        <md-input-container>
+                            <label>Banco</label>
+                            <input name="bank" type="text" ng-model="person.bankInfo.bank" class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-4">
+                        <md-input-container>
+                            <label>Agência</label>
+                            <input name="agency" type="text" ng-model="person.bankInfo.agency" class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-3">
+                        <md-input-container>
+                            <label>Número da conta</label>
+                            <input name="account" type="text" ng-model="person.bankInfo.account" class="form-control">
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <p>Tipo de conta</p>
+
+                        <md-radio-group ng-model="person.bankInfo.accountType" ng-required="true" class="md-primary">
+
+                            <md-radio-button value="0">Conta corrente</md-radio-button>
+                            <md-radio-button value="1">Poupança</md-radio-button>
+                            <md-radio-button value="2">Ambas</md-radio-button>
+
+                        </md-radio-group>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="submit" class="btn btn-primary btn-default pull-right" value="Enviar" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

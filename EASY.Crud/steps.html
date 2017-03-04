@@ -1,0 +1,240 @@
+﻿<div ng-controller="baseController as vm">
+
+    <!--/vm.person/-->
+    <form class="firstForm" name="firstForm" ng-show="vm.step === 1" ng-submit="vm.step = 2">
+        <h3>Dados pessoais</h3>
+        <hr/>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Nome</label>
+                    <input name="name" type="text" ng-model="vm.person.name" required class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Email</label>
+                    <input name="email" type="email" ng-model="vm.person.email" required class="form-control">
+                    <div ng-messages="firstForm.email.$error" role="alert">
+                        <div ng-message="email" ng-show="firstForm.email.$error.email">
+                            <b>Email</b> inválido
+                        </div>
+                    </div>
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Skype</label>
+                    <input name="skype" type="text" ng-model="vm.person.skype" required class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Telefone</label>
+                    <input name="phone" type="text" ng-model="vm.person.phone" required class="form-control">
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Linkedin</label>
+                    <input name="linkedin" type="text" ng-model="vm.person.linkedin" class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Portifólio</label>
+                    <input name="portifolio" type="text" ng-model="vm.person.portifolio" class="form-control">
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-5">
+                <md-input-container>
+                    <label>Cidade</label>
+                    <input name="city" type="text" required ng-model="vm.person.city" class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-4">
+                <md-input-container>
+                    <label>Estado</label>
+                    <input name="state" type="text" required ng-model="vm.person.state" class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-3">
+                <md-input-container>
+                    <label>Valor cobrado por hora?</label>
+                    <input name="hourlySalary" type="number" required ng-model="vm.person.hourlySalary" class="form-control">
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+
+                <p>Pra você qual é o melhor horário para trabalhar ?</p>
+
+                <md-radio-group ng-model="vm.person.disponibility" ng-required="true" class="md-primary">
+
+                    <md-radio-button value="0">Até 4 horas por dia</md-radio-button>
+                    <md-radio-button value="1">De 4 á 6 horas por dia</md-radio-button>
+                    <md-radio-button value="2">De 6 á 8 horas por dia</md-radio-button>
+                    <md-radio-button value="3">Acima de 8 horas por dia (<b>tem certeza?</b>)</md-radio-button>
+                    <md-radio-button value="4">Apenas finais de semana</md-radio-button>
+
+                </md-radio-group>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-6">
+                <p>Qual é sua disponibilidade para trabalhar hoje?</p>
+
+                <md-radio-group ng-model="vm.person.bestTime" ng-required="true" class="md-primary">
+
+                    <md-radio-button value="0">Manhã (de 08:00 ás 12:00)</md-radio-button>
+                    <md-radio-button value="1">Tarde (de 13:00 ás 18:00)</md-radio-button>
+                    <md-radio-button value="2">Noite (de 19:00 as 22:00)</md-radio-button>
+                    <md-radio-button value="3">Madrugada (de 22:00 em diante)</md-radio-button>
+                    <md-radio-button value="4">Comercial (de 08:00 as 18:00)</md-radio-button>
+                    <md-radio-button value="5">Qualqer horário</md-radio-button>
+
+                </md-radio-group>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" class="btn btn-primary btn-default pull-right" value="Proximo"/>
+        </div>
+    </form>
+
+    <!--/vm.person.bankInfo/-->
+    <form class="secondForm" name="secondForm" ng-show="vm.step === 2" ng-submit="vm.step = 3">
+        <h3>Dados bancários</h3>
+        <hr/>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>Nome</label>
+                    <input name="name" type="text" ng-model="vm.person.bankInfo.name" class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-6">
+                <md-input-container>
+                    <label>CPF</label>
+                    <input name="cpf" type="text" ng-model="vm.person.bankInfo.cpf" class="form-control">
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-5">
+                <md-input-container>
+                    <label>Banco</label>
+                    <input name="bank" type="text" ng-model="vm.person.bankInfo.bank" class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-4">
+                <md-input-container>
+                    <label>Agência</label>
+                    <input name="agency" type="text" ng-model="vm.person.bankInfo.agency" class="form-control">
+                </md-input-container>
+            </div>
+
+            <div class="form-group col-sm-12 col-md-3">
+                <md-input-container>
+                    <label>Número da conta</label>
+                    <input name="account" type="text" ng-model="vm.person.bankInfo.account" class="form-control">
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-6">
+                <p>Tipo de conta</p>
+
+                <md-radio-group ng-model="vm.person.bankInfo.accountType" ng-required="true" class="md-primary">
+
+                    <md-radio-button value="0">Conta corrente</md-radio-button>
+                    <md-radio-button value="1">Poupança</md-radio-button>
+                    <md-radio-button value="2">Ambas</md-radio-button>
+
+                </md-radio-group>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="button" class="btn btn-primary btn-warning pull-left" ng-click="vm.step = 1" value="Anterior"/>
+            <input type="submit" class="btn btn-primary btn-default pull-right" value="Proximo"/>
+        </div>
+    </form>
+
+    <!--/vm.person/-->
+    <form class="thirdForm" name="thirdForm" ng-show="vm.step === 3" ng-submit="vm.submitInfo()">
+        <h3>Conhecimentos</h3>
+        <small>Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber de muitas coisas, o importante é que seja sincero!</small>
+        <hr/>
+
+        <div>
+            <div class="row" ng-repeat="knowBase in vm.person.knowledgeBase track by $index">
+                <div class="form-group col-sm-12 col-md-10">
+                    <h3>{{knowBase.Name}}</h3>
+
+                    <md-slider-container>
+                        <span>Não conheço</span>
+                        <md-slider class="md-primary" flex="" min="0" max="5" aria-label="knowledges" md-discrete="" ng-init="vm.person.knowledges[$index].knowledgeBaseId=knowBase.Id;" ng-model="vm.person.knowledges[$index].points">
+                        </md-slider>
+                        <md-input-container class="col-md-2">
+                            <input flex="" type="number"
+                                   aria-label="knowledges"
+                                   ng-init="vm.person.knowledges[$index].points=0"
+                                   ng-model="vm.person.knowledges[$index].points" min="0" max="5">
+                        </md-input-container>
+                        <span>Sênior</span>
+                    </md-slider-container>
+                    <hr/>
+                </div>
+            </div>
+        </div><br/>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-12">
+                <md-input-container class="md-block">
+                    <label>Outros conhecimentos, se auto-avalie ainda de 0 a 5.</label>
+                    <textarea ng-model="vm.person.moreLanguages" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-12">
+                <md-input-container>
+                    <label>Link do crud</label>
+                    <input name="crudLink" type="text" ng-model="vm.person.CrudLink" class="form-control">
+                    <small>
+                        Insira aqui o link do CRUD (create, update, delete) conforme
+                        <a href="https://www.google.com/url?q=https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM&sa=D&ust=1488572945007000&usg=AFQjCNEkxddIJXT175NTtRcjdFe4fbdB5w">Especificações</a>.
+                    </small>
+                </md-input-container>
+            </div>
+        </div><br/>
+
+        <div class="row">
+            <input type="button" class="btn btn-primary btn-warning pull-left" ng-click="vm.step = 1" value="Anterior"/>
+            <input type="submit" class="btn btn-primary btn-default pull-right" value="Enviar"/>
+        </div>
+    </form>
+</div>
+

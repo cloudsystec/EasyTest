@@ -1,0 +1,61 @@
+﻿<div class="docs-ng-view layout-padding ng-scope flex-noshrink">
+    <div class="doc-content">
+
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+            <!--/person/-->
+            <form class="thirdForm" name="thirdForm" ng-submit="editPerson()">
+                <h3>Conhecimentos</h3>
+                <small>Avalie-se de 0 a 5 quanto aos conhecimentos especificados abaixo, e tudo bem se não souber de muitas coisas, o importante é que seja sincero!</small>
+                <hr />
+
+                <div>
+                    <div class="row" ng-repeat="knowBase in person.knowledgeBase track by $index">
+                        <div class="form-group col-sm-12 col-md-10">
+                            <h3>{{knowBase.Name}}</h3>
+
+                            <md-slider-container>
+                                <span>Não conheço</span>
+                                <md-slider class="md-primary" flex="" min="0" max="5" aria-label="knowledges" md-discrete="" ng-model="person.knowledges[$index].Points">
+                                </md-slider>
+                                <md-input-container class="col-md-2">
+                                    <input flex="" type="number"
+                                           aria-label="knowledges"
+                                           ng-model="person.knowledges[$index].Points" min="0" max="5">
+                                </md-input-container>
+                                <span>Sênior</span>
+                            </md-slider-container>
+                            <hr />
+                        </div>
+                    </div>
+                </div><br />
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-12">
+                        <md-input-container class="md-block">
+                            <label>Outros conhecimentos, se auto-avalie ainda de 0 a 5.</label>
+                            <textarea ng-model="person.moreLanguages" md-maxlength="150" rows="5" md-select-on-focus=""></textarea>
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-12">
+                        <md-input-container>
+                            <label>Link do crud</label>
+                            <input name="crudLink" type="text" ng-model="person.crudLink" class="form-control">
+                            <small>
+                                Insira aqui o link do CRUD (create, update, delete) conforme
+                                <a href="https://www.google.com/url?q=https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM&sa=D&ust=1488572945007000&usg=AFQjCNEkxddIJXT175NTtRcjdFe4fbdB5w">Especificações</a>.
+                            </small>
+                        </md-input-container>
+                    </div>
+                </div><br />
+
+                <div class="row">
+                    <input type="submit" class="btn btn-primary btn-default pull-right" value="Editar" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

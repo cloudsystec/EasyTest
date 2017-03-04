@@ -1,0 +1,124 @@
+﻿<div class="docs-ng-view layout-padding ng-scope flex-noshrink">
+    <div class="doc-content">
+
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+            <!--/person/-->
+            <form class="firstForm" name="firstForm" ng-submit="editPerson()">
+                <h3>Dados pessoais</h3>
+                <hr />
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Nome</label>
+                            <input name="name" type="text" ng-model="person.name" required class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Email</label>
+                            <input name="email" type="email" ng-model="person.email" required class="form-control">
+                            <div ng-messages="firstForm.email.$error" role="alert">
+                                <div ng-message="email" ng-show="firstForm.email.$error.email">
+                                    <b>Email</b> inválido
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Skype</label>
+                            <input name="skype" type="text" ng-model="person.skype" required class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Telefone</label>
+                            <input name="phone" type="text" ng-model="person.phone" required class="form-control">
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Linkedin</label>
+                            <input name="linkedin" type="text" ng-model="person.linkedin" class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-6">
+                        <md-input-container>
+                            <label>Portifólio</label>
+                            <input name="portifolio" type="text" ng-model="person.portifolio" class="form-control">
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-5">
+                        <md-input-container>
+                            <label>Cidade</label>
+                            <input name="city" type="text" required ng-model="person.city" class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-4">
+                        <md-input-container>
+                            <label>Estado</label>
+                            <input name="state" type="text" required ng-model="person.state" class="form-control">
+                        </md-input-container>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-3">
+                        <md-input-container>
+                            <label>Valor cobrado por hora?</label>
+                            <input name="hourlySalary" type="number" required ng-model="person.hourlySalary" class="form-control">
+                        </md-input-container>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-12 col-md-6">
+
+                        <p>Pra você qual é o melhor horário para trabalhar ?</p>
+
+                        <md-radio-group ng-model="person.disponibility" ng-required="true" class="md-primary">
+
+                            <md-radio-button value="0">Até 4 horas por dia</md-radio-button>
+                            <md-radio-button value="1">De 4 á 6 horas por dia</md-radio-button>
+                            <md-radio-button value="2">De 6 á 8 horas por dia</md-radio-button>
+                            <md-radio-button value="3">Acima de 8 horas por dia (<b>tem certeza?</b>)</md-radio-button>
+                            <md-radio-button value="4">Apenas finais de semana</md-radio-button>
+
+                        </md-radio-group>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-md-6">
+                        <p>Qual é sua disponibilidade para trabalhar hoje?</p>
+
+                        <md-radio-group ng-model="person.bestTime" ng-required="true" class="md-primary">
+
+                            <md-radio-button value="0">Manhã (de 08:00 ás 12:00)</md-radio-button>
+                            <md-radio-button value="1">Tarde (de 13:00 ás 18:00)</md-radio-button>
+                            <md-radio-button value="2">Noite (de 19:00 as 22:00)</md-radio-button>
+                            <md-radio-button value="3">Madrugada (de 22:00 em diante)</md-radio-button>
+                            <md-radio-button value="4">Comercial (de 08:00 as 18:00)</md-radio-button>
+                            <md-radio-button value="5">Qualqer horário</md-radio-button>
+
+                        </md-radio-group>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-success btn-default pull-right" value="Editar" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

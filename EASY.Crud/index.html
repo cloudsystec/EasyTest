@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <base href="/" />
+        <link href="Content/bootstrap.css" rel="stylesheet" />
+        <link href="Content/bootstrap-theme.min.css" rel="stylesheet"/>
+        <link href="Content/app.css" rel="stylesheet" />
+        <link href="Content/angular-material.css" rel="stylesheet"/>
+        <link href="Content/sweet-alert.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+        <style>
+            small {
+                font-size: 12px;
+                color: gray;
+            }
+             .toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+                 color: white; }
+        </style>
+    </head>
+<body ng-app="app" ng-cloak >
+<div class="toolbardemoBasicUsage">
+    <md-content>
+        <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
+            <div class="md-toolbar-tools">
+                <h2 flex="" md-truncate="">Banco de Talentos - Easy Communication & Technology</h2>
+                <div>
+                    <a href="/" flex="" md-truncate=""><i class="material-icons">&#xE89C;</i></a>
+                    <a href="/persons" flex="" md-truncate=""><i class="material-icons">&#xE254;</i></a>
+                </div>
+            </div>
+        </md-toolbar>
+        <div class="docs-ng-view layout-padding ng-scope flex-noshrink">
+            <div class="doc-content">
+
+                <div class="col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <ng-view></ng-view>
+                </div>
+
+            </div>
+        </div>
+    </md-content>
+</div>
+
+    <script src="Scripts/jquery-3.1.1.slim.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular/angular.min.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-material/angular-aria.min.js"></script>
+    <script src="Scripts/angular-material/angular-material.min.js"></script>
+    <script src="Scripts/SweetAlert/sweet-alert.min.js"></script>
+    <script src="Scripts/SweetAlert/sweetAlert.min.js"></script>
+    <script src="Scripts/angular-material/angular-messages.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="App/app.js"></script>
+    <script src="App/factory.js"></script>
+    <script src="App/controller.js"></script>
+    <script src="App/personController.js"></script>
+</body>
+</html>

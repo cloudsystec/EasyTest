@@ -1,0 +1,16 @@
+﻿<div ng-controller="personController as vm" ng-cloak>
+    <md-list>
+        <md-subheader class="md-no-sticky">Formulários enviados</md-subheader>
+        <md-list-item ng-repeat="person in persons" class="noright">
+            <p><small>{{ person.id }}</small></p>
+            <p>{{ person.name }}</p>
+            <!--<md-icon md-svg-icon="communication:email" ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3"></md-icon>-->
+            <!--<md-icon class="md-secondary" ng-click="doSecondaryAction($event)" aria-label="cake" md-svg-icon="social:cake"></md-icon>-->
+
+            <i aria-label="materialIcons" class="material-icons md-secondary md-hue-3" ng-click="goToPerson(person, $event, 'personEdit.html')">&#xE254;</i>
+            <i aria-label="materialIcons" class="material-icons md-secondary md-hue-3" ng-click="goToPerson(person, $event, 'bankEdit.html')">&#xE870;</i>
+            <i aria-label="materialIcons" class="material-icons md-secondary md-hue-3" ng-click="goToPerson(person, $event, 'aditionalEdit.html')">&#xE86D;</i>
+            <i aria-label="materialIcons" class="material-icons md-secondary md-hue-3" style="color: #cf0000" ng-click="deletePerson(person, $event)">&#xE92B;</i>
+        </md-list-item>
+    </md-list>
+</div>
